@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git 'https://github.com/MaheshGit5096/terraform-project.git'
+                git 'https://github.com/MaheshGit5096/Terraform-New_Jenkins.git'
             }
         }
         stage('init') {
@@ -22,9 +22,11 @@ pipeline {
                 sh 'terraform plan'
             }
         }
-        stage('action') {
+        stage('Terraform Apply') {
             steps {
-                sh 'terraform $action --auto-approve'
+                script {
+                    input 'Deploy changes?'
+                    sh 'terraform apply -auto-approve'
             }
         }
     }
