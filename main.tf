@@ -12,5 +12,3 @@ resource "aws_instance" "demo" {
   }
 }
 
-output "result" {
-value = [aws_instance.demo.public_ip]
