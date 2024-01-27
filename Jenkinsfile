@@ -33,7 +33,7 @@ pipeline {
         stage('Apply / Destroy') {
             steps {
                 script {
-                    sh 'terraform apply --auto-approve'
+                    sh 'terraform destroy --auto-approve'
                     
                 }
             }
