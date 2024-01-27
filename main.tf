@@ -8,7 +8,7 @@ resource "aws_instance" "demo" {
   key_name      = "test"              # Replace with your key pair name
 
   tags = {
-    Name = "NodeJS"               # Replace with your desired instance name
+    Name = "jenkins"               # Replace with your desired instance name
   }
 }
 
